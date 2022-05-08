@@ -14,16 +14,16 @@ The canvas starts at coordinates 1, 1. Colours are specified by capital letters.
 ## Commands
 There are 10 supported commands:
 
-`?` - Shows in program help.
-`I N M` - Create a new M x N image with all pixels coloured white (O).
-`C` - Clears the table, setting all pixels to white (O).
-`L X Y C` - Colours the pixel (X,Y) with colour C.
-`V X Y1 Y2 C` - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
-`H X1 X2 Y C` - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
-`S` - Show the contents of the current image
-`X` - Terminate the session
-`F X Y C` - Fill the region R with the colour C. R is defined as:
-`W F` - Scales the canvas with the given factor F (in percentage). Notice that this might have some undesired effects on your
+- `?` - Shows in program help.
+- `I N M` - Create a new M x N image with all pixels coloured white (O).
+- `C` - Clears the table, setting all pixels to white (O).
+- `L X Y C` - Colours the pixel (X,Y) with colour C.
+- `V X Y1 Y2 C` - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
+- `H X1 X2 Y C` - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
+- `S` - Show the contents of the current image
+- `X` - Terminate the session
+- `F X Y C` - Fill the region R with the colour C. R is defined as:
+- `W F` - Scales the canvas with the given factor F (in percentage). Notice that this might have some undesired effects on your
 canvas; when you scale up you might generate more white space than you wish, or when you scale down you might
 lose some pixels. It’s ok with a sub-optimal scaled canvas as long as the tradeoffs are discussed. Here is an example with
 the case limit of a 1x1 canvas where we scale by a 200% factor:
