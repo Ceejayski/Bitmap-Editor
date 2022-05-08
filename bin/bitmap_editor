@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/command_parser'
+
+
+print '> '
+allowed_commands = %w[I L C V H S F W ?]
+command = gets.chomp!.split.compact
+bitmap = nil
+
+until command[0] == 'X'
+  
+  if allowed_commands.include?(command[0])
+    bitmap = CommandPaser.new(command.shift, command, bitmap).perform
+  else
+    puts "Invalid Command please read instruction to know instruction or use '?' to see all valid commands"
+  end
+  print '> '
+  command = gets.chomp!.split.compact
+
+end
